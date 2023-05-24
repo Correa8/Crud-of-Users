@@ -50,11 +50,22 @@ const App = () => {
       })
       .catch((error) => console.error(error));
   };
+  /*PUT Remover lo de UserForm */
+  const editUser = (user) => {
+    axios
+      .put(`https://users-crud.academlo.tech/users/${user.id}/`, user)
+      .then((res) => {
+        getData();
+        setUserSelected(null);
+        console.log(res);
+      })
+      .catch((error) => console.error(error));
+  };
 
   return (
     <div>
       <UserList listUser={listUser} deleteUser={deleteUser} selectUser={selectUser} />
-      <UserForm addUser={addUser} userSelected={userSelected} />
+      <UserForm addUser={addUser} userSelected={userSelected} editUser={editUser} />
     </div>
   );
 };

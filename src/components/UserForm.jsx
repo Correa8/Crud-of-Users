@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useEffect } from 'react';
 
-const UserForm = ({ addUser, userSelected }) => {
+const UserForm = ({ addUser, userSelected, editUser }) => {
   const { register, handleSubmit, reset } = useForm();
 
   const empyUser = {
@@ -21,33 +21,62 @@ const UserForm = ({ addUser, userSelected }) => {
   }, [userSelected]);
 
   const submit = (data) => {
-    addUser(data);
+    if (userSelected) {
+      editUser(data);
+    } else {
+      addUser(data);
+      reset(empyUser);
+    }
   };
   return (
-     <div >
+    <div className='all'>
       <form
         onSubmit={handleSubmit(submit)}
         className="w-96 10px bg-gradient-to-t
       from-yellow-300 via-300 to-blue-600 rounded-3xl"
       >
-        <h1>Nuevo Usuario</h1>
+        <h1 className="new-user">Nuevo Usuario</h1>
         <div className="target-user">
           <label htmlFor="firsName"></label>
-          <input type="text" id="firsName" required {...register('first_name')} />
+          <input
+            type="text"
+            id="firsName"
+            placeholder="Nombre"
+            required
+            {...register('first_name')}
+          />
         </div>
         <div className="target-user">
           <label htmlFor="lastName">
-            <input type="text" id="lastName" required {...register('last_name')} />
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Apellido"
+              required
+              {...register('last_name')}
+            />
           </label>
         </div>
         <div className="target-user">
           <label htmlFor="email">
-            <input type="text" id="email" required {...register('email')} />
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              required
+              {...register('email')}
+            />
           </label>
         </div>
         <div className="target-user">
           <label htmlFor="password">
-            <input type="text" id="password" required {...register('password')} />
+            <input
+              type="text"
+              id="password"
+              placeholder="Contraseña"
+              required
+              {...register('password')}
+            />
           </label>
         </div>
         <div className="target-user">
@@ -55,7 +84,9 @@ const UserForm = ({ addUser, userSelected }) => {
             <input type="date" id="birthday" required {...register('birthday')} />
           </label>
         </div>
-        <button>Agregar Nuevo Usuario</button>
+        <button type="submit" className="btn-form">
+          {userSelected ? 'Editar' : 'Crear'}
+        </button>
       </form>
     </div>
   );

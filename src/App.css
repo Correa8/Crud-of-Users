@@ -1,11 +1,118 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color:rgb(216, 187, 243) ;
-    display: flex;
-    justify-content: center;
+body {
+  font-family: cursive;
+  background-color: rgb(216, 187, 243);
 }
+/* This is UserList */
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0px 40px;
+  margin: 100px 0px;
+}
+.container-user {
+  background-color: rgb(101, 197, 197);
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0.2rem 0rem 1.7rem;
+  padding: 3px;
+  text-align: center;
+  width: 300px;
+  height: 170px;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+.name {
+  font-size: 20px;
+}
+span {
+  color: rgb(58, 59, 58);
+  font-weight: 500;
+  font-size: 18px;
+}
+.btn-delete {
+  background-color: red;
+  border: 1px solid black;
+  margin: 0px 5px;
+  padding: 1px;
+}
+.btn-select {
+  background-color: darkgrey;
+  border: 1px solid black;
+  margin: 1px 5px;
+  padding: 1px;
+}
+
+/*This is UserForm*/
+.all {
+  position: relative;
+  bottom: 810px;
+  left: 33%;
+  margin: 20px;
+}
+form {
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  align-self: flex-start;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+.new-user {
+  text-align: center;
+  font-size: 25px;
+}
+.target-user {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+input {
+  border: 1px solid black;
+  padding: 1rem;
+}
+.btn-form {
+  text-align: center;
+  align-items: center;
+  background-color: blue;
+}
+
+@media (max-width: 992px) {
+  .all {
+    position: relative;
+    bottom: 830px;
+    left: 30%;
+    margin: 20px;
+  }
+  .name {
+    font-size: 17px;
+  }
+  span {
+    font-size: 17px;
+  }
+  .btn-delete {
+    font-size: 15px;
+  }
+  .btn-select {
+    font-size: 15px;
+  }
+  .container-user {
+    width: 280px;
+    height: 170px;
+  }
+}
+@media (max-width: 768px) {
+    .all {
+      position: relative;
+      bottom: 1200px;
+      left: 20%;
+      margin: 20px;
+    }
+ 
+  }
