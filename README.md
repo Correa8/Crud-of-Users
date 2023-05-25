@@ -1,10 +1,1 @@
-PLANTILLA DE REACT CON DEPENDENCIAS 
-*Tailwind
-*Prettierrc
-*axios
-*postcss
-*eslint-config-react-app
-*eslint-plugin-prettier
-*eslint-config-prettier
-*autoprefixer
-*
+App creada con React, donde se consume una api, se emplea inputs contrladospor medio de una libreria y se obtiene un CRUD funcional de usuarios
