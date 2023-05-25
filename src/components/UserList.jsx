@@ -1,5 +1,4 @@
 import React from 'react';
-<box-icon type="solid" name="edit"></box-icon>;
 
 const UserList = ({ listUser, deleteUser, selectUser }) => {
   return (
