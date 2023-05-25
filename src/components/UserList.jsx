@@ -11,13 +11,13 @@ const UserList = ({ listUser, deleteUser, selectUser }) => {
             {user.first_name} {user.last_name}
           </h2>
           <hr />
-          <h2>
+          <h2 className="h2">
             <span>Email </span> : {user.email}
           </h2>
-          <h2>
+          <h2 className="h2">
             <span>Contraseña</span> : {user.password}
           </h2>
-          <h2>
+          <h2 className="h2">
             <span>Birthday</span> : {user.birthday}
           </h2>
           <button onClick={() => deleteUser(user.id)} className="btn-delete">

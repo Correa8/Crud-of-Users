@@ -9,7 +9,7 @@
 }
 body{
   background-image:
-   url("./fond1.jpg") ;
+   url("/fond1.jpg") ;
    background-position:center;
    background-size: cover;
 }

@@ -29,10 +29,10 @@ const UserForm = ({ addUser, userSelected, editUser }) => {
     }
   };
   return (
-    <div className='all'>
+    <div className="all">
       <form
         onSubmit={handleSubmit(submit)}
-        className="w-96 10px bg-gradient-to-t
+        className=" 10px bg-gradient-to-t
       from-yellow-300 via-300 to-blue-600 rounded-3xl"
       >
         <h1 className="new-user">Nuevo Usuario</h1>
@@ -84,7 +84,7 @@ const UserForm = ({ addUser, userSelected, editUser }) => {
             <input type="date" id="birthday" required {...register('birthday')} />
           </label>
         </div>
-        <button type="submit" className="btn-form">
+        <button type="submit" className="">
           {userSelected ? 'Editar' : 'Crear'}
         </button>
       </form>
