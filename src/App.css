@@ -197,3 +197,11 @@ input {
     font-size: 10px;
   }
 }
+@media (max-width: 120px) {
+  .all {
+    bottom: 1125px;
+    left: 3%;
+    margin: 0px;
+    font-size: 10px;
+  }
+}
